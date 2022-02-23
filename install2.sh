@@ -5,7 +5,7 @@ if [ -e $bin/git ]; then
   echo -e "\u001b[32mSkip install git but already installed!"
 else 
   echo -e "\u001b[31mInstaling \u001b[31mgit!"
-  pkg install nodejs -y
+  apt install nodejs -y
   echo -e "\u001b[32mDone install git!"
 fi
 
@@ -15,7 +15,7 @@ check() {
   if [ -e $bin/git ]; then
     echo -e "\u001b[32mGit already installed!"
   else
-    echo -e "\u001b[31mGit not installed!!, install manualy using `pkg install git -y` or `apt install git -y` and after that, type `bash install2.sh`"
+    echo -e "\u001b[31mGit not installed!!, install manualy using `apt install git -y` or `apt install git -y` and after that, type `bash install2.sh`"
     exit 1
   fi
 }
